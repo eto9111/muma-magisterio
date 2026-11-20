@@ -49,6 +49,7 @@ body {
   color: var(--text-main);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* Evita parpadeo horizontal durante el deslizamiento */
 }
 
 /* Tipografía */
@@ -337,16 +338,22 @@ a:hover {
 .tab-pane {
   display: none;
   padding: 2.5rem 0 4rem 0;
-  animation: fadeIn 0.3s ease;
 }
 
 .tab-pane.active {
   display: block;
+  animation: tabSlideIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes tabSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .section-header {

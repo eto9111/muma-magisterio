@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabButtons = document.querySelectorAll('.nav-tab-btn');
   const tabPanes = document.querySelectorAll('.tab-pane');
 
-  function switchTab(targetTabId) {
+  function switchTab(targetTabId, smoothFocusNav = true) {
     if (!targetTabId) return;
 
     // Actualizar botones
@@ -33,14 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Actualizar URL hash sin salto brusco
     history.replaceState(null, null, `#${targetTabId}`);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // No subir a la presentación inicial (Hero/Header).
+    // Posicionar la vista directamente en el contenido de la pestaña bajo la barra de navegación
+    const navEl = document.getElementById('main-navigation');
+    if (navEl && smoothFocusNav) {
+      const navTop = navEl.getBoundingClientRect().top + window.pageYOffset;
+      // Si el usuario ya está interactuando o está por debajo del inicio, enfocar en el contenido
+      if (window.pageYOffset > 80 || window.pageYOffset > navTop) {
+        window.scrollTo({
+          top: navTop,
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = btn.getAttribute('data-tab');
-      switchTab(targetId);
+      switchTab(targetId, true);
     });
   });
 
@@ -49,16 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const target = link.getAttribute('data-switch-tab');
-      switchTab(target);
+      switchTab(target, true);
     });
   });
 
   // Manejo de Hash inicial en la URL
   const initialHash = window.location.hash.replace('#', '');
   if (initialHash && document.getElementById(initialHash)) {
-    switchTab(initialHash);
+    switchTab(initialHash, false);
   } else {
-    switchTab('tab-inicio');
+    switchTab('tab-inicio', false);
   }
 
   // 2. Acordeón para Capítulos del Trabajo de Grado
