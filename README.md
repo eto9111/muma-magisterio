@@ -5,6 +5,14 @@
 **Línea:** Derecho, Emprendimiento y Sociedad  
 **Ubicación:** San Juan de Pasto, Nariño (Colombia)
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/eto9111/muma-magisterio)
+
+---
+
+## 🚀 DESPLIEGUE DIRECTO A RENDER (1 CLIC)
+Haz clic en el botón superior o entra a este enlace directo:  
+👉 **[Desplegar en Render con 1 Clic](https://render.com/deploy?repo=https://github.com/eto9111/muma-magisterio)**
+
 ---
 
 ## 🎯 PROPÓSITO DEL PROYECTO
