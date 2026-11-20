@@ -395,14 +395,14 @@ a:hover {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1.5rem;
 }
 
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.5rem;
 }
 
 .decreto-card {
@@ -475,16 +475,23 @@ a:hover {
 
 .decreto-list li {
   font-size: 0.92rem;
-  padding: 0.45rem 0;
-  border-bottom: 1px dashed #f1f5f9;
-  display: flex;
-  gap: 0.5rem;
-  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px dashed #e2e8f0;
+  display: block; /* Flujo de bloque natural para evitar colisión de columnas */
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .decreto-list li strong {
   color: var(--primary-navy);
-  min-width: 95px;
+  font-weight: 700;
+}
+
+.decreto-list li strong:first-child {
+  color: var(--primary-navy);
+  display: inline;
+  margin-right: 0.25rem;
 }
 
 .decreto-list li:last-child {
@@ -1179,11 +1186,12 @@ a:hover {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN MULTIPLATAFORMA (MÓVILES, TABLETS Y ESCRITORIO)
    ========================================================================== */
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .thesis-layout {
     grid-template-columns: 1fr;
@@ -1193,26 +1201,211 @@ a:hover {
   }
   .video-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .sim-results-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .grid-2 {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
-  .hero-banner {
-    padding: 2rem 0;
+@media (max-width: 650px) {
+  .container {
+    padding: 0 1rem;
   }
+
+  .top-institutional-bar {
+    font-size: 0.74rem;
+    padding: 0.4rem 0;
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .inst-right-info {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .hero-banner {
+    padding: 1.75rem 0;
+  }
+
   .hero-title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-tags {
+    gap: 0.35rem;
+  }
+
+  .hero-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .hero-author-card {
+    padding: 1.15rem;
+  }
+
+  .author-name {
+    font-size: 1.1rem;
+  }
+
+  /* Barra de pestañas táctil */
+  .nav-tabs-wrapper {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 0.25rem;
+  }
+
+  .nav-tab-btn {
+    font-size: 0.84rem;
+    padding: 0.85rem 0.95rem;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .nav-quick-actions {
+    display: none; /* Oculta botón redundante para dar espacio limpio al swipe de pestañas */
+  }
+
+  /* Tarjetas y Contenido */
+  .card {
+    padding: 1.25rem 1rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+  }
+
+  /* Lista de decretos sin distorsión */
+  .decreto-list li {
+    font-size: 0.88rem;
+    padding: 0.55rem 0;
+    line-height: 1.55;
+  }
+
+  .decreto-name {
+    font-size: 1.2rem;
+  }
+
+  /* Tabla comparativa táctil */
+  .table-responsive-box {
+    margin: 1rem 0;
+    border-radius: var(--radius-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparative-table {
+    min-width: 680px; /* Asegura que las columnas mantengan su legibilidad al deslizar */
+  }
+
+  .comparative-table th,
+  .comparative-table td {
+    padding: 0.85rem 0.9rem;
+    font-size: 0.84rem;
+  }
+
+  /* Diapositivas en móvil */
+  .slide-stage-viewport {
+    padding: 1.5rem 1rem;
+    min-height: auto;
+  }
+
+  .slide-main-heading {
+    font-size: 1.35rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .slide-body-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .slides-toolbar {
+    padding: 0.65rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .slides-controls-nav {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .btn-slide-nav {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  /* Video */
+  .video-feature-wrapper {
+    padding: 1.25rem 1rem;
+  }
+
+  .video-uploader-bar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  /* Simulador */
+  .simulator-box {
+    padding: 1.25rem 1rem;
+  }
+
+  .sim-big-number {
     font-size: 1.75rem;
   }
-  .slide-stage-viewport {
-    padding: 1.75rem 1.25rem;
+
+  .sim-controls-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
   }
-  .slide-main-heading {
-    font-size: 1.5rem;
+
+  /* Acordeón de capítulos */
+  .chapter-header-btn {
+    padding: 1rem 1.15rem;
+  }
+
+  .chapter-title-text {
+    font-size: 0.98rem;
+  }
+
+  .chapter-body-content {
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
   }
 }
