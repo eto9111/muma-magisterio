@@ -1,0 +1,24 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directories
+node_modules/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large media files (GitHub has a 100MB limit per file)
+assets/video/*.mp4
+assets/video/*.avi
+assets/video/*.mov
+!assets/video/.gitkeep

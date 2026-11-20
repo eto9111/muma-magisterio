@@ -1,0 +1,23 @@
+{
+  "name": "muma-sustentacion-magisterio",
+  "version": "1.0.0",
+  "description": "Plataforma de Sustentación de Grado de Derecho - Universidad CESMAG - Sebastián Muñoz Martínez (MUMA)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "derecho",
+    "magisterio",
+    "decretos",
+    "cesmag",
+    "pension",
+    "fomag"
+  ],
+  "author": "Sebastián Muñoz Martínez (MUMA)",
+  "license": "ISC"
+}
