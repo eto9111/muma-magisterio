@@ -1,6 +1,6 @@
 # PLATAFORMA DE SUSTENTACIÓN DE GRADO - DERECHO (UNIVERSIDAD CESMAG)
 **Autor:** Sebastián Muñoz Martínez (MUMA)  
-**Asesora:** Mg. Johana Elizabeth Ortega Caicedo  
+**Directora de Investigación:** Mg. MARIA ALICIA ORDONEZ HERRERA  
 **Grupo de Investigación:** DIDS (Derecho, Innovación y Desarrollo Social)  
 **Línea:** Derecho, Emprendimiento y Sociedad  
 **Ubicación:** San Juan de Pasto, Nariño (Colombia)

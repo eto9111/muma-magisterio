@@ -96,37 +96,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Manejo de Video de MUMA (Carga local / Video Player interactivo)
-  const videoInput = document.getElementById('local-video-file');
-  const mainVideo = document.getElementById('muma-main-video');
-  const videoOverlay = document.getElementById('video-placeholder-overlay');
-  const playOverlayBtn = document.getElementById('btn-play-overlay');
-  const videoStatusText = document.getElementById('video-status-msg');
+  // 3. Manejo de Modales (QR de Encuesta y Poster Lightbox)
+  function setupModal(triggerId, modalId, closeClass) {
+    const triggers = document.querySelectorAll(triggerId);
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
 
-  if (videoInput && mainVideo) {
-    videoInput.addEventListener('change', function () {
-      const file = this.files[0];
-      if (file) {
-        const fileUrl = URL.createObjectURL(file);
-        mainVideo.src = fileUrl;
-        mainVideo.load();
-        if (videoOverlay) videoOverlay.style.display = 'none';
-        if (videoStatusText) videoStatusText.textContent = `Reproduciendo archivo: ${file.name}`;
-        mainVideo.play();
+    const closeBtns = modal.querySelectorAll(`.${closeClass}`);
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Cerrar con Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   }
 
-  if (playOverlayBtn && mainVideo) {
-    playOverlayBtn.addEventListener('click', () => {
-      if (videoOverlay) videoOverlay.style.display = 'none';
-      if (mainVideo.src) {
-        mainVideo.play();
-      } else {
-        alert("¡Hola! Aquí puedes cargar tu video explicativo en formato MP4 o WebM usando el botón inferior 'Subir video local', o colocar el archivo en la carpeta 'assets/video/muma_explicativo.mp4'.");
-      }
-    });
-  }
+  setupModal('#btn-open-qr-modal, [data-open-qr-modal]', 'academic-qr-modal', 'modal-close-btn');
+  setupModal('#btn-open-poster-modal, [data-open-poster-modal]', 'academic-poster-modal', 'modal-close-btn');
 
   // 4. Inicializar Módulos de Diapositivas y Simulador
   if (window.initSlides) {

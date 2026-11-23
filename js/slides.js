@@ -11,7 +11,7 @@
     {
       num: 1,
       tag: "Portada Oficial · Sustentación de Grado",
-      title: "Desmejora y Precarización Laboral en el Magisterio de Pasto (2002–2025)",
+      title: "Desmejora y Precarización Laboral en el Magisterio de Pasto (2002–2026)",
       body: `
         <div style="font-size:1.15rem; line-height:1.7; margin-bottom:1.5rem;">
           <p><strong>Trabajo de Grado:</strong> Un análisis sociojurídico de la dualidad estatutaria entre los <strong>Decretos 2277 de 1979</strong> y <strong>1278 de 2002</strong>, y la fragmentación con el <strong>Decreto 0934 de 2026 (SEIP)</strong>.</p>
@@ -22,9 +22,9 @@
               <p style="margin:0; font-size:0.85rem; color:#475569;">Programa de Derecho · Universidad CESMAG</p>
             </div>
             <div>
-              <p style="margin:0; font-size:0.85rem; color:#64748b;">DOCENTE ASESORA:</p>
-              <p style="margin:0; font-size:1.05rem; font-weight:700; color:#0e213b;">Mg. Johana Elizabeth Ortega Caicedo</p>
-              <p style="margin:0; font-size:0.85rem; color:#475569;">Grupo de Investigación DIDS (Derecho y Sociedad)</p>
+              <p style="margin:0; font-size:0.85rem; color:#64748b;">DOCENTE ACOMPAÑANTE / DIRECTORA:</p>
+              <p style="margin:0; font-size:1.05rem; font-weight:700; color:#0e213b;">Mg. MARIA ALICIA ORDONEZ HERRERA</p>
+              <p style="margin:0; font-size:0.85rem; color:#475569;">Grupo de Investigación DIDS · Universidad CESMAG</p>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
       tag: "Problema de Investigación · El Contexto Territorial",
       title: "La Ruptura del Estatuto Único Docente",
       body: `
-        <p>¿De qué manera la coexistencia de los Decretos 2277 de 1979 y 1278 de 2002 ha generado una desmejora o precarización de los derechos sustantivos de los docentes oficiales en Pasto durante 2002–2025?</p>
+        <p>¿De qué manera la coexistencia de los Decretos 2277 de 1979 y 1278 de 2002 ha generado una desmejora o precarización de los derechos sustantivos de los docentes oficiales en Pasto durante 2002–2026?</p>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; margin-top:1.25rem;">
           <div style="background:#fff; border-left:4px solid #1b4975; padding:1rem; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
             <strong style="color:#0e213b;">Dualidad en una misma aula</strong>
@@ -290,8 +290,8 @@
 
     // Keyboard navigation
     window.addEventListener('keydown', (e) => {
-      // Only handle arrows if slides tab is visible or in fullscreen
-      const slidesTab = document.getElementById('tab-diapositivas');
+      // Only handle arrows if slides container is visible or in fullscreen
+      const slidesTab = document.getElementById('tab-informe-final') || document.getElementById('tab-diapositivas');
       const isVisible = slidesTab && slidesTab.classList.contains('active');
       const isFs = !!document.fullscreenElement;
 

@@ -24,7 +24,7 @@
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 8.9L4.22 7 12 3.47 19.78 7 12 10.9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
         </svg>
-        <span>UNIVERSIDAD CESMAG · Facultad de Ciencias Sociales y Humanas · Programa de Derecho</span>
+        <span>UNIVERSIDAD CESMAG · Facultad de Ciencias Jurídicas y Políticas · Programa de Derecho</span>
       </div>
       <div class="inst-right-info">
         <span>Grupo DIDS (Derecho, Innovación y Desarrollo Social)</span>
@@ -46,7 +46,7 @@
             Desmejora y Precarización Laboral en el <span class="gold-highlight">Magisterio Oficial</span>
           </h1>
           <p class="hero-subtitle">
-            Análisis crítico de la dualidad estatutaria entre los <strong>Decretos 2277 de 1979</strong> y <strong>1278 de 2002</strong>, y la fragmentación con el <strong>Decreto 0934 de 2026 (SEIP)</strong> en materia de salud y régimen pensional (Pasto, Nariño 2002–2025).
+            Análisis crítico de la dualidad estatutaria entre los <strong>Decretos 2277 de 1979</strong> y <strong>1278 de 2002</strong>, y la fragmentación con el <strong>Decreto 0934 de 2026 (SEIP)</strong> en materia de salud y régimen pensional (Pasto, Nariño 2002–2026).
           </p>
           <div class="hero-tags">
             <span class="hero-tag">Igualdad Material (Art. 13 C.P.)</span>
@@ -62,10 +62,11 @@
           <div class="author-name">Sebastián Muñoz Martínez</div>
           <div class="author-meta">
             Estudiante del Programa de Derecho<br>
-            Seminario de Grado · Universidad CESMAG<br>
-            <strong>Asesora:</strong> Mg. Johana Elizabeth Ortega Caicedo
+            Facultad de Ciencias Jurídicas y Políticas<br>
+            Universidad CESMAG · San Juan de Pasto<br>
+            <strong>Directora:</strong> Mg. MARIA ALICIA ORDONEZ HERRERA
           </div>
-          <span class="author-badge">Ponencia para Grado de Abogado</span>
+          <span class="author-badge">Trabajo de Grado para Título de Abogado</span>
         </div>
       </div>
     </div>
@@ -96,9 +97,10 @@
         <span class="tab-badge">Cap. I - V</span>
       </button>
 
-      <button class="nav-tab-btn" data-tab="tab-diapositivas">
-        <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12H5V5h14v10zm-9 3H8v2h8v-2h-2v-1h-4v1z"/></svg>
-        <span>Diapositivas Interactivas</span>
+      <button class="nav-tab-btn" data-tab="tab-informe-final">
+        <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        <span>Informe Final de Grado</span>
+        <span class="tab-badge">Tesis 2026</span>
       </button>
 
       <button class="nav-tab-btn" data-tab="tab-simulador">
@@ -107,9 +109,16 @@
       </button>
 
       <div class="nav-quick-actions">
-        <button class="btn-sustentacion" data-switch-tab="tab-diapositivas">
-          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <span>Modo Jurado</span>
+        <!-- BOTÓN QR ENCUESTA GOOGLE FORMS AL FINALIZAR EL MENÚ -->
+        <button class="btn-nav-qr" id="btn-open-qr-modal" title="Escanear Código QR de la Encuesta Docente Google Forms">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-5 0h3v3h-3v-3zm2 5h3v3h-3v-3zm3-2h3v5h-2v-3h-1v-2zm-5 2h2v3h-2v-3zm3 0h2v1h-2v-1z"/></svg>
+          <span>Encuesta Forms</span>
+          <span class="qr-mini-badge">QR</span>
+        </button>
+
+        <button class="btn-sustentacion" data-switch-tab="tab-informe-final">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+          <span>Ver Informe</span>
         </button>
       </div>
     </div>
@@ -119,85 +128,109 @@
   <main class="container">
 
     <!-- ====================================================================
-         PESTAÑA 1: INICIO & SUSTENTACIÓN (VIDEO + RESUMEN)
+         PESTAÑA 1: INICIO & SUSTENTACIÓN (PÓSTER ACADÉMICO + RESUMEN)
          ==================================================================== -->
     <section class="tab-pane active" id="tab-inicio">
       <div class="section-header">
         <div class="section-pretitle">Portal Académico de Divulgación Jurídica</div>
         <h2 class="section-title">Sustentación del Trabajo de Grado</h2>
         <p class="section-desc">
-          Este espacio interactivo presenta los hallazgos, fundamentos teóricos y análisis jurisprudencial de la investigación adelantada en el Programa de Derecho de la Universidad CESMAG sobre la crisis prestacional y estatutaria del magisterio en Pasto y Nariño.
+          Este espacio interactivo presenta los hallazgos, fundamentos teóricos y análisis jurisprudencial de la investigación adelantada en el Programa de Derecho de la Universidad CESMAG sobre la crisis prestacional y estatutaria del magisterio en Pasto y Nariño durante el período 2002–2026.
         </p>
       </div>
 
-      <!-- ESPACIO MULTIMEDIA: VIDEO EXPLICATIVO DE MUMA -->
-      <div class="video-feature-wrapper">
-        <div class="video-grid">
+      <!-- ESPACIO MULTIMEDIA: PÓSTER ACADÉMICO DEL INFORME FINAL (EN LUGAR DEL VIDEO) -->
+      <div class="poster-feature-wrapper">
+        <div class="poster-grid">
           <div>
-            <div class="video-player-container">
-              <video id="muma-main-video" controls poster="assets/video_poster.jpg">
-                <source src="assets/video/muma_explicativo.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video HTML5.
-              </video>
-
-              <div class="video-placeholder-overlay" id="video-placeholder-overlay">
-                <button class="video-play-btn" id="btn-play-overlay" title="Reproducir Explicación de MUMA">
-                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </button>
-                <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1.2rem;">Video Explicativo de la Tesis</h4>
-                <p style="color:#cbd5e1; font-size:0.88rem; max-width:440px; margin-bottom:1rem;">
-                  "Esto lo hace el MUMA" — Exposición magistral de la diferencia de los 3 decretos, la crisis de salud en el FOMAG y la desmejora pensional.
-                </p>
-                <span style="font-size:0.75rem; color:#94a3b8; background:rgba(0,0,0,0.6); padding:0.25rem 0.65rem; border-radius:4px;">
-                  Espacio listo para reproducir archivo local o embebido
-                </span>
+            <div class="poster-image-showcase" id="poster-showcase-box" data-open-poster-modal>
+              <img src="assets/poster_informe_final.jpg" alt="Póster Académico - Informe Final de Trabajo de Grado - Universidad CESMAG" loading="lazy">
+              <div class="poster-badge-top">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"/></svg>
+                <span>Informe Final de Trabajo de Grado · Universidad CESMAG</span>
               </div>
-            </div>
-
-            <!-- Barra para cargar video local sin necesidad de internet -->
-            <div class="video-uploader-bar">
-              <span id="video-status-msg">¿Deseas montar o probar tu archivo de video local?</span>
-              <label class="btn-upload-label" for="local-video-file">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:4px;"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
-                Cargar Video (.mp4 / .webm)
-              </label>
-              <input type="file" id="local-video-file" accept="video/mp4, video/webm, video/ogg">
+              <div class="poster-action-overlay">
+                <button class="btn-zoom-poster" id="btn-open-poster-modal" title="Ver Póster en Alta Resolución">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                  <span>Ampliar / Ver en Alta Resolución</span>
+                </button>
+                <span class="poster-meta-tag">Haz clic para zoom interactivo</span>
+              </div>
             </div>
           </div>
 
-          <div class="video-info-content">
-            <div class="author-title" style="color:#facc15;">Módulo de Ponencia Audiovisual</div>
-            <h3>Explicación Magistral por Sebastián Muñoz (MUMA)</h3>
+          <div class="poster-info-content">
+            <div class="author-title" style="color:#facc15;">Divulgación Científica de la Investigación</div>
+            <h3>Póster Académico: Desmejora o Precarización Laboral del Magisterio de Pasto</h3>
             <p style="color:#cbd5e1; font-size:0.92rem; line-height:1.6;">
-              En este registro audiovisual, el sustentante desglosa con lenguaje claro y soporte constitucional por qué el magisterio colombiano pasó de un régimen de protección social garantista a un modelo fragmentado de precariado profesional.
+              Síntesis oficial del informe final de trabajo de grado presentada en la Facultad de Ciencias Jurídicas y Políticas de la Universidad CESMAG. Este póster condensa la evidencia dogmática y de campo en 7 ejes temáticos:
             </p>
 
-            <ul class="video-timeline">
-              <li>
-                <span class="time-stamp">01:15</span>
-                <span>El pacto histórico del Decreto 2277/79 y los derechos del Normalista Superior.</span>
+            <ul class="poster-modules-list">
+              <li class="poster-module-item">
+                <span class="poster-module-num">1</span>
+                <div>
+                  <span class="poster-module-title">Introducción:</span>
+                  <span class="poster-module-desc"> El magisterio como pilar social y la fragmentación normativa (D. 2277/79 vs. 1278/02).</span>
+                </div>
               </li>
-              <li>
-                <span class="time-stamp">04:30</span>
-                <span>La ruptura del Decreto 1278/02: El concurso docente y la brecha del 65% pensional.</span>
+              <li class="poster-module-item">
+                <span class="poster-module-num">2</span>
+                <div>
+                  <span class="poster-module-title">Problema de Investigación:</span>
+                  <span class="poster-module-desc"> Precarización en salud y pensión en Pasto frente a la brecha del 75% vs. 65%.</span>
+                </div>
               </li>
-              <li>
-                <span class="time-stamp">08:45</span>
-                <span>Decreto 0934/2026: El SEIP, dinamizadores indígenas y la tensión de no regresividad.</span>
+              <li class="poster-module-item">
+                <span class="poster-module-num">3</span>
+                <div>
+                  <span class="poster-module-title">Objetivos:</span>
+                  <span class="poster-module-desc"> Analizar la dualidad estatutaria y formular garantías de equidad para los educadores.</span>
+                </div>
               </li>
-              <li>
-                <span class="time-stamp">13:20</span>
-                <span>La crisis de salud en el FOMAG y el papel histórico del sindicato FECODE.</span>
+              <li class="poster-module-item">
+                <span class="poster-module-num">4</span>
+                <div>
+                  <span class="poster-module-title">Justificación Cuádruple:</span>
+                  <span class="poster-module-desc"> Relevancia social, jurídica, académica y territorial nariñense con el D. 0934/26.</span>
+                </div>
+              </li>
+              <li class="poster-module-item">
+                <span class="poster-module-num">5</span>
+                <div>
+                  <span class="poster-module-title">Marco Referencial:</span>
+                  <span class="poster-module-desc"> Antecedentes, teoría del precariado de Guy Standing y derechos del magisterio.</span>
+                </div>
+              </li>
+              <li class="poster-module-item">
+                <span class="poster-module-num">6</span>
+                <div>
+                  <span class="poster-module-title">Metodología Mixta:</span>
+                  <span class="poster-module-desc"> Triangulación convergente con 65 encuestas digitales y 10 entrevistas a profundidad.</span>
+                </div>
+              </li>
+              <li class="poster-module-item">
+                <span class="poster-module-num">7</span>
+                <div>
+                  <span class="poster-module-title">Resultados & Conclusiones:</span>
+                  <span class="poster-module-desc"> Brecha pensional de 10 puntos, crisis en FOMAG y regresividad objetiva demostrada.</span>
+                </div>
               </li>
             </ul>
 
-            <div style="margin-top:1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
-              <button class="btn-sustentacion" data-switch-tab="tab-decretos">
-                Ver Cuadro Comparativo
+            <div class="poster-action-buttons">
+              <button class="btn-sustentacion" data-switch-tab="tab-informe-final">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                <span>Leer Informe Final Completo</span>
               </button>
-              <button class="btn-sustentacion" style="background:#1e3a5f;" data-switch-tab="tab-simulador">
-                Probar Simulador
+              <button class="btn-sustentacion" style="background:#0d827d;" data-open-qr-modal>
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-5 0h3v3h-3v-3zm2 5h3v3h-3v-3zm3-2h3v5h-2v-3h-1v-2zm-5 2h2v3h-2v-3zm3 0h2v1h-2v-1z"/></svg>
+                <span>Ver Encuesta Docente (QR)</span>
               </button>
+              <a href="assets/poster_informe_final.jpg" download="Poster_Academico_Magisterio_MUMA_CESMAG.jpg" class="btn-sustentacion" style="background:#1e3a5f;">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                <span>Descargar Póster</span>
+              </a>
             </div>
           </div>
         </div>
@@ -611,17 +644,17 @@
             <div class="chapter-body-content active">
               <h4>1.1 Objeto o Tema de Estudio</h4>
               <p>
-                El objeto de estudio es la desmejora y precarización de los derechos sustantivos laborales en materia de salud y régimen pensional de los docentes oficiales del departamento de Nariño (con énfasis en la ciudad de Pasto), derivada de la coexistencia del Decreto Ley 2277 de 1979 y el Decreto Ley 1278 de 2002, así como la reciente incidencia del Decreto 0934 de 2026 (SEIP) durante el período 2002–2025.
+                El objeto de estudio es la desmejora y precarización de los derechos sustantivos laborales en materia de salud y régimen pensional de los docentes oficiales del departamento de Nariño (con énfasis en la ciudad de Pasto), derivada de la coexistencia del Decreto Ley 2277 de 1979 y el Decreto Ley 1278 de 2002, así como la reciente incidencia del Decreto 0934 de 2026 (SEIP) durante el período 2002–2026.
               </p>
 
               <h4>1.2 Pregunta Problema</h4>
               <div style="background:#f1f5f9; padding:1.25rem; border-left:4px solid var(--primary-navy); border-radius:4px; font-weight:600; color:#0e213b; margin:1rem 0;">
-                "¿De qué manera la coexistencia de los Decretos 2277 de 1979 y 1278 de 2002 ha generado una desmejora o precarización de los derechos sustantivos de los docentes oficiales de Pasto en materia de salud y régimen pensional durante el período 2002–2025?"
+                "¿De qué manera la coexistencia de los Decretos 2277 de 1979 y 1278 de 2002 ha generado una desmejora o precarización de los derechos sustantivos de los docentes oficiales de Pasto en materia de salud y régimen pensional durante el período 2002–2026?"
               </div>
 
               <h4>1.3 Objetivos</h4>
               <ul>
-                <li><strong>Objetivo General:</strong> Analizar la desmejora o precarización de los derechos sustantivos del magisterio oficial en materia de salud y pensión, derivada de la dualidad estatutaria durante 2002–2025.</li>
+                <li><strong>Objetivo General:</strong> Analizar la desmejora o precarización de los derechos sustantivos del magisterio oficial en materia de salud y pensión, derivada de la dualidad estatutaria durante 2002–2026.</li>
                 <li><strong>Objetivo Específico 1:</strong> Identificar las principales vulneraciones en acceso a salud y calificación de enfermedades profesionales.</li>
                 <li><strong>Objetivo Específico 2:</strong> Examinar las diferencias en el régimen pensional frente al principio de progresividad y no regresividad.</li>
                 <li><strong>Objetivo Específico 3:</strong> Establecer los mecanismos jurídicos de exigibilidad y propuestas de reforma para la unificación estatutaria.</li>
@@ -761,59 +794,566 @@
     </section>
 
     <!-- ====================================================================
-         PESTAÑA 5: DIAPOSITIVAS INTERACTIVAS (PRESENTACIÓN JURADO)
+         PESTAÑA 5: INFORME FINAL DE TRABAJO DE GRADO (DOCUMENTO COMPLETO 2026)
          ==================================================================== -->
-    <section class="tab-pane" id="tab-diapositivas">
+    <section class="tab-pane" id="tab-informe-final">
       <div class="section-header">
-        <div class="section-pretitle">Modo Sustentación de Grado en Vivo</div>
-        <h2 class="section-title">Diapositivas de Exposición Magistral</h2>
+        <div class="section-pretitle">Universidad CESMAG · Facultad de Ciencias Jurídicas y Políticas · Programa de Derecho</div>
+        <h2 class="section-title">Informe Final de Trabajo de Grado</h2>
         <p class="section-desc">
-          Visor interactivo con controles de teclado (Flechas &rarr; / &larr; / Barra Espaciadora / Tecla 'N' para notas / 'F' para pantalla completa).
+          Texto académico íntegro de la monografía jurídica presentada por <strong>Sebastián Muñoz Martínez</strong> como requisito para optar al título de Abogado, bajo la dirección de la <strong>Mg. MARIA ALICIA ORDONEZ HERRERA</strong>. San Juan de Pasto, Nariño, 2026.
         </p>
       </div>
 
-      <div class="slides-app-container" id="slides-presentation-container">
-        <!-- BARRA SUPERIOR DEL VISOR -->
-        <div class="slides-toolbar">
-          <div class="slide-counter" id="slide-counter-display">Diapositiva 1 de 10</div>
-          
-          <div class="slides-controls-nav">
-            <button class="btn-slide-nav" id="btn-slide-prev" title="Anterior (Flecha Izquierda)">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-              <span>Anterior</span>
-            </button>
+      <!-- BARRA DE ACCIONES DEL DOCUMENTO -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem; background:#f1f5f9; padding:1rem 1.5rem; border-radius:var(--radius-md); border:1px solid #cbd5e1;">
+        <div style="font-size:0.88rem; color:#334155; font-weight:600;">
+          <span>📖 Formato Monográfico Oficial · Criterios APA 7 · Investigación Sociojurídica Mixta</span>
+        </div>
+        <div style="display:flex; gap:0.65rem; flex-wrap:wrap;">
+          <button class="btn-sustentacion" onclick="window.print()" style="font-size:0.82rem; padding:0.45rem 0.9rem; background:#0e213b;">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+            <span>Imprimir / PDF</span>
+          </button>
+          <button class="btn-sustentacion" data-open-qr-modal style="font-size:0.82rem; padding:0.45rem 0.9rem; background:#0d827d;">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-5 0h3v3h-3v-3zm2 5h3v3h-3v-3zm3-2h3v5h-2v-3h-1v-2zm-5 2h2v3h-2v-3zm3 0h2v1h-2v-1z"/></svg>
+            <span>Encuesta Forms (QR)</span>
+          </button>
+          <button class="btn-sustentacion" data-open-poster-modal style="font-size:0.82rem; padding:0.45rem 0.9rem; background:#b45309;">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <span>Póster Científico</span>
+          </button>
+          <a href="#presentacion-diapositivas-ancla" class="btn-sustentacion" style="font-size:0.82rem; padding:0.45rem 0.9rem; background:#1e3a5f;">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12H5V5h14v10zm-9 3H8v2h8v-2h-2v-1h-4v1z"/></svg>
+            <span>Ver Diapositivas</span>
+          </a>
+        </div>
+      </div>
 
-            <button class="btn-slide-nav" id="btn-slide-next" title="Siguiente (Flecha Derecha / Espacio)">
-              <span>Siguiente</span>
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-            </button>
+      <!-- ARTÍCULO TIPO MONOGRAFÍA ACADÉMICA FORMAL -->
+      <article class="monograph-paper" id="documento-monografia-oficial">
 
-            <button class="btn-slide-nav" id="btn-toggle-notes" title="Activar/Desactivar Notas del Expositor (Tecla N)">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"/></svg>
-              <span>Notas MUMA</span>
-            </button>
+        <!-- PORTADA OFICIAL -->
+        <div class="monograph-cover-block">
+          <div class="monograph-inst-heading">UNIVERSIDAD CESMAG</div>
+          <div class="monograph-facultad">FACULTAD DE CIENCIAS JURÍDICAS Y POLÍTICAS</div>
+          <div class="monograph-programa">PROGRAMA DE DERECHO</div>
 
-            <button class="btn-slide-nav" id="btn-fullscreen-slides" title="Pantalla Completa (Tecla F)">
-              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-              <span>Pantalla Completa</span>
-            </button>
+          <h1 class="monograph-main-title">
+            DESMEJORA O PRECARIZACIÓN LABORAL DE LOS DERECHOS SUSTANTIVOS LABORALES Y PRESTACIONALES EN MATERIA DE SALUD Y PENSIÓN EN EL MAGISTERIO DE NARIÑO A PARTIR DEL DECRETO 2277 DE 1979 AL 1278 DE 2002 DURANTE LOS AÑOS 2002 A 2026
+          </h1>
+
+          <div class="monograph-author-block">
+            <div class="monograph-author-name">SEBASTIÁN MUÑOZ MARTÍNEZ</div>
+            <div class="monograph-degree-req">
+              Trabajo de grado presentado como requisito para optar al título de Abogado
+            </div>
+          </div>
+
+          <div class="monograph-director-block">
+            <div class="monograph-director-title">Director de Investigación:</div>
+            <div class="monograph-director-name">Mg. MARIA ALICIA ORDONEZ HERRERA</div>
+          </div>
+
+          <div class="monograph-city-year">SAN JUAN DE PASTO, NARIÑO<br>2026</div>
+        </div>
+
+        <!-- NOTA DE ACEPTACIÓN -->
+        <div class="monograph-formal-box">
+          <div class="formal-box-title">NOTA DE ACEPTACIÓN</div>
+          <p style="margin-bottom:1.5rem;">
+            El presente trabajo de grado titulado <em>"Desmejora o precarización laboral de los derechos sustantivos laborales y prestacionales en materia de salud y pensión en el magisterio de Nariño a partir del Decreto 2277 de 1979 al 1278 de 2002 durante los años 2002 a 2026"</em>, presentado por el estudiante <strong>SEBASTIÁN MUÑOZ MARTÍNEZ</strong>, reúne los méritos jurídicos, metodológicos y dogmáticos exigidos por la Universidad CESMAG para optar al título de <strong>Abogado</strong>.
+          </p>
+
+          <div class="signatures-grid">
+            <div>
+              <div class="signature-line">
+                Mg. MARIA ALICIA ORDONEZ HERRERA<br>
+                <span style="font-weight:normal; font-size:0.8rem; color:#64748b;">Firma de la Directora</span>
+              </div>
+            </div>
+            <div>
+              <div class="signature-line">
+                Jurado Calificador 1<br>
+                <span style="font-weight:normal; font-size:0.8rem; color:#64748b;">Firma del Jurado</span>
+              </div>
+            </div>
+            <div>
+              <div class="signature-line">
+                Jurado Calificador 2<br>
+                <span style="font-weight:normal; font-size:0.8rem; color:#64748b;">Firma del Jurado</span>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top:1.5rem; font-size:0.85rem; color:#64748b;">
+            San Juan de Pasto, Nariño, 2026
           </div>
         </div>
 
-        <div class="slides-progress-track">
-          <div class="slides-progress-bar" id="slides-progress-fill"></div>
+        <!-- NOTA DE EXCLUSIÓN DE RESPONSABILIDAD -->
+        <div class="monograph-formal-box" style="background:#fff7ed; border-color:#ffedd5;">
+          <div class="formal-box-title" style="color:#9a3412; border-color:#ea580c;">NOTA DE EXCLUSIÓN DE RESPONSABILIDAD</div>
+          <p style="font-size:0.88rem; color:#7c2d12; margin:0;">
+            Las opiniones, afirmaciones y conclusiones expresadas en el presente trabajo de grado son responsabilidad exclusiva de su autor y no comprometen en modo alguno el pensamiento institucional de la Universidad CESMAG ni el de los jurados que lo evaluaron. La institución y los jurados no son responsables de los planteamientos jurídicos, teóricos o empíricos contenidos en este informe, que reflejan únicamente la posición académica e investigativa del estudiante.
+          </p>
         </div>
 
-        <!-- ESCENARIO PRINCIPAL DE LA DIAPOSITIVA -->
-        <div class="slide-stage-viewport">
-          <div class="slide-header-tag" id="slide-tag">Portada Oficial</div>
-          <h2 class="slide-main-heading" id="slide-title">Cargando diapositiva...</h2>
-          <div class="slide-body-text" id="slide-body"></div>
+        <!-- DEDICATORIA Y AGRADECIMIENTOS -->
+        <div class="grid-2" style="margin:2.5rem 0;">
+          <div class="monograph-formal-box" style="margin:0;">
+            <div class="formal-box-title">DEDICATORIA</div>
+            <p style="font-style:italic; font-size:0.9rem; line-height:1.7;">
+              "A los docentes del magisterio nariñense que, día a día, construyen el futuro de nuestra región desde las aulas de instituciones educativas muchas veces alejadas del poder y de la justicia. A quienes ingresaron al servicio después de 2002 con la misma vocación y el mismo compromiso que sus predecesores, pero con garantías laborales menores. Su trabajo merece reconocimiento y sus derechos merecen protección."
+            </p>
+            <p style="font-style:italic; font-size:0.9rem; margin-top:0.75rem;">
+              "A mis padres, cuyo apoyo durante mis años de estudio hizo posible este trabajo."
+            </p>
+          </div>
+
+          <div class="monograph-formal-box" style="margin:0;">
+            <div class="formal-box-title">AGRADECIMIENTOS</div>
+            <p style="font-size:0.88rem; line-height:1.7;">
+              Al <strong>Programa de Derecho de la Universidad CESMAG</strong> y a su cuerpo docente, por la formación jurídica que sustenta este trabajo.<br><br>
+              A la <strong>Mg. Maria Alicia Ordonez Herrera</strong>, directora de esta investigación, por su orientación rigurosa, su acompañamiento constante y su compromiso inquebrantable con la calidad académica.<br><br>
+              A los docentes del magisterio nariñense que participaron en la encuesta digital y en las entrevistas en Pasto.<br><br>
+              Al <strong>Grupo de Investigación DIDS</strong> de la Universidad CESMAG, por el respaldo institucional permanente.
+            </p>
+          </div>
         </div>
 
-        <!-- PANEL DE NOTAS PARA EL EXPOSITOR (MUMA) -->
-        <div class="speaker-notes-panel" id="speaker-notes-panel">
-          <p id="slide-notes-text">Notas de sustentación para el jurado examinador.</p>
+        <!-- RESUMEN Y ABSTRACT -->
+        <div class="monograph-abstract-card">
+          <h3 style="color:#0e213b; margin-top:0;">RESUMEN</h3>
+          <p style="font-size:0.93rem; line-height:1.8; text-align:justify;">
+            La presente investigación analiza la desmejora o precarización de los derechos sustantivos laborales y prestacionales en materia de salud y pensión que ha experimentado el magisterio oficial del departamento de Nariño como consecuencia de la coexistencia del Decreto Ley 2277 de 1979 y el Decreto 1278 de 2002, durante el período comprendido entre los años 2002 y 2026. El problema central de la investigación es la dualidad estatutaria generada por estos dos regímenes, que obliga a docentes que realizan idénticas funciones profesionales a vivir condiciones radicalmente distintas en materia de acceso a la salud especializada y de condiciones para el acceso a la pensión de vejez.
+          </p>
+          <p style="font-size:0.93rem; line-height:1.8; text-align:justify;">
+            La investigación utiliza un paradigma mixto con diseño de triangulación convergente, que combina el análisis dogmático-crítico del marco normativo y la jurisprudencia constitucional con la recolección de datos empíricos mediante encuesta digital aplicada a 65 docentes en servicio activo en el área urbana de Pasto, y entrevistas semiestructuradas con 10 educadores seleccionados intencionalmente (5 del Decreto 2277 y 5 del Decreto 1278). Los hallazgos revelan que el 84% de los docentes del Decreto 1278 evalúa negativamente el acceso a servicios de salud especializados para enfermedades profesionales propias de la docencia, y que la brecha pensional entre los dos regímenes alcanza diferencias de entre 8 y 12 puntos porcentuales en la tasa de reemplazo efectiva (75% vs. 65%). El análisis jurídico concluye que la dualidad estatutaria constituye una medida regresiva en materia de derechos sociales que vulnera el principio de progresividad consagrado en el artículo 48 de la Constitución Política y en el artículo 2.1 del Pacto Internacional de Derechos Económicos, Sociales y Culturales (PIDESC).
+          </p>
+          <div class="keywords-tag-list">
+            <strong>Palabras clave:</strong> desmejora laboral, precarización, magisterio, dualidad estatutaria, salud docente, pensión docente, principio de progresividad, Decreto 2277, Decreto 1278, Nariño.
+          </div>
+        </div>
+
+        <div class="monograph-abstract-card" style="border-left-color:var(--accent-teal);">
+          <h3 style="color:#0e213b; margin-top:0;">ABSTRACT</h3>
+          <p style="font-size:0.93rem; line-height:1.8; text-align:justify;">
+            This research analyzes the deterioration or labor precariousness of substantive labor and social security rights regarding health and pension for public school teachers in the department of Nariño, Colombia, resulting from the coexistence of Decree Law 2277 of 1979 and Decree 1278 of 2002, during the period from 2002 to 2026. Using a mixed-methods design with convergent triangulation, combining dogmatic-critical legal analysis with an empirical survey of 65 active teachers in urban Pasto and semi-structured interviews with 10 selected educators, the study finds that 84% of Decree 1278 teachers negatively rate access to specialized health services for occupational diseases, and that the pension gap between the two regimes reaches between 8 and 12 percentage points in effective replacement rates. The legal analysis concludes that the dual statutory regime constitutes a regressive measure on social rights that violates the principle of progressivity enshrined in Article 48 of the Political Constitution and Article 2.1 of the International Covenant on Economic, Social and Cultural Rights.
+          </p>
+          <div class="keywords-tag-list">
+            <strong>Keywords:</strong> labor deterioration, precariousness, teaching profession, dual statutory regime, teacher health, teacher pension, principle of progressivity, Decree 2277, Decree 1278, Nariño.
+          </div>
+        </div>
+
+        <!-- TABLA DE CONTENIDO NAVEGABLE -->
+        <div class="monograph-toc">
+          <div class="monograph-toc-title">TABLA DE CONTENIDO GENERAL</div>
+          <div class="monograph-toc-grid">
+            <div class="monograph-toc-row"><a href="#doc-introduccion">INTRODUCCIÓN</a><span class="monograph-toc-page">Pág. 9</span></div>
+            <div class="monograph-toc-row"><a href="#doc-cap1">1. PROBLEMA DE INVESTIGACIÓN</a><span class="monograph-toc-page">Pág. 11</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-1-1">1.1 Objeto de investigación</a><span class="monograph-toc-page">Pág. 11</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-1-2">1.2 Línea de investigación</a><span class="monograph-toc-page">Pág. 12</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-1-3">1.3 Planteamiento del problema (1.3.1 - 1.3.6)</a><span class="monograph-toc-page">Pág. 13</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-1-4">1.4 Formulación del problema</a><span class="monograph-toc-page">Pág. 22</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-1-5">1.5 Objetivos general y específicos</a><span class="monograph-toc-page">Pág. 22</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-1-6">1.6 Justificación jurídica, social, académica y territorial</a><span class="monograph-toc-page">Pág. 23</span></div>
+            <div class="monograph-toc-row"><a href="#doc-cap2">2. MARCO REFERENCIAL</a><span class="monograph-toc-page">Pág. 28</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-2-1">2.1 Antecedentes internacionales, nacionales y pedagógicos</a><span class="monograph-toc-page">Pág. 28</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-2-2">2.2 Marco teórico: Guy Standing, Progresividad y FOMAG</a><span class="monograph-toc-page">Pág. 34</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-2-3">2.3 Marco conceptual sociojurídico</a><span class="monograph-toc-page">Pág. 44</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-2-4">2.4 Marco normativo (C.P., D. 2277, D. 1278 y D. 0934)</a><span class="monograph-toc-page">Pág. 50</span></div>
+            <div class="monograph-toc-row"><a href="#doc-cap3">3. METODOLOGÍA</a><span class="monograph-toc-page">Pág. 56</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-3-1">3.1 Paradigma y enfoque de investigación</a><span class="monograph-toc-page">Pág. 56</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-3-4">3.4 Triangulación convergente mixta</a><span class="monograph-toc-page">Pág. 61</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-3-5">3.5 Componente cuantitativo: Encuesta digital (Tabla 1)</a><span class="monograph-toc-page">Pág. 63</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-3-6">3.6 Componente cualitativo: Entrevistas semiestructuradas</a><span class="monograph-toc-page">Pág. 68</span></div>
+            <div class="monograph-toc-row" style="padding-left:1.5rem;"><a href="#doc-3-10">3.10 Cronograma de actividades (Tabla 2)</a><span class="monograph-toc-page">Pág. 80</span></div>
+            <div class="monograph-toc-row"><a href="#doc-referencias">REFERENCIAS BIBLIOGRÁFICAS (Normas, Jurisprudencia y Doctrina)</a><span class="monograph-toc-page">Pág. 82</span></div>
+          </div>
+        </div>
+
+        <!-- INTRODUCCIÓN -->
+        <section id="doc-introduccion" style="margin-top:3rem;">
+          <h2>INTRODUCCIÓN</h2>
+          <p>
+            El magisterio colombiano está dividido. Esta afirmación, que podría parecer una hipérbole retórica, describe con precisión la realidad jurídica que enfrentan los docentes del sector oficial desde el año 2002: en un mismo establecimiento educativo, dos profesores con idéntica formación académica, las mismas responsabilidades frente a sus estudiantes y la misma jornada laboral acceden a condiciones radicalmente distintas de protección en salud y de perspectivas pensionales. La causa de esta división es la coexistencia de dos estatutos docentes —el Decreto Ley 2277 de 1979 y el Decreto 1278 de 2002— que regulan las condiciones de trabajo de los educadores oficiales según una sola variable: la fecha en que ingresaron al servicio.
+          </p>
+          <p>
+            Esta investigación parte de la convicción de que esa división no es un accidente administrativo ni un efecto secundario inevitable de la modernización del sistema educativo: es una consecuencia directa de una decisión política adoptada en 2002 con el argumento de mejorar la calidad de la educación, pero que produjo, entre otros efectos, la reducción de los derechos prestacionales de todos los nuevos ingresantes al magisterio oficial. La pregunta central que esta investigación se propone responder es si esa reducción, sostenida durante más de dos décadas en el departamento de Nariño, configura una vulneración del principio constitucional de progresividad y no regresividad en materia de derechos sociales.
+          </p>
+          <p>
+            El departamento de Nariño ofrece un contexto especialmente relevante para este análisis. Con una geografía que combina el altiplano andino, el Piedemonte Costero, la costa Pacífica y el Piedemonte Amazónico, Nariño concentra una de las poblaciones docentes más diversas y, al mismo tiempo, más expuestas a condiciones adversas del país. Los maestros de Tumaco, Barbacoas, el Piedemonte Costero y los municipios afectados por el conflicto armado ejercen su profesión en condiciones de alta exigencia física y psicológica, lo que hace aún más relevante la pregunta por la adecuación de sus sistemas de protección en salud y pensión.
+          </p>
+          <p>
+            La investigación está organizada en tres capítulos. El Capítulo 1 desarrolla el problema de investigación, precisando el objeto y la línea de investigación, planteando el problema en sus dimensiones normativa, jurisprudencial y fáctica, formulando la pregunta de investigación y estableciendo los objetivos y la justificación del estudio. El Capítulo 2 construye el marco referencial, que incluye los antecedentes internacionales y nacionales relevantes, el marco teórico —centrado en la teoría del precariado de Guy Standing, el principio de progresividad y los derechos sustantivos del magisterio—, el marco conceptual y el marco normativo. El Capítulo 3 desarrolla la metodología de la investigación, que combina el análisis dogmático-crítico del derecho con la recolección de datos empíricos mediante encuesta digital y entrevistas semiestructuradas con docentes de ambos estatutos, en un diseño de triangulación convergente.
+          </p>
+          <p>
+            Los hallazgos de esta investigación apuntan a tres conclusiones principales. Primera: la dualidad estatutaria constituye una medida regresiva en materia de derechos sociales que no encuentra justificación constitucional suficiente en las razones ofrecidas por el Gobierno al momento de expedir el Decreto 1278. Segunda: los efectos de esa regresividad son concretos y documentables: los docentes del Decreto 1278 en Nariño enfrentan barreras significativas de acceso a salud especializada y proyectan pensiones sustancialmente menores que sus colegas del Decreto 2277. Tercera: la superación de esta inequidad requiere una intervención legislativa orientada a la armonización de los regímenes en favor de las condiciones más protectoras para todos los educadores, en cumplimiento del mandato constitucional de progresividad.
+          </p>
+        </section>
+
+        <!-- CAPÍTULO 1 -->
+        <section id="doc-cap1" style="margin-top:3rem;">
+          <h2>1. PROBLEMA DE INVESTIGACIÓN</h2>
+          
+          <h3 id="doc-1-1">1.1 Objeto de investigación</h3>
+          <p>
+            El objeto de la presente investigación es el análisis jurídico de la desmejora o precarización de los derechos sustantivos laborales y prestacionales en materia de salud y pensión que ha experimentado el magisterio oficial del departamento de Nariño como consecuencia de la transición del régimen establecido por el Decreto Ley 2277 de 1979 al régimen introducido por el Decreto 1278 de 2002, durante el período comprendido entre los años 2002 y 2026. La investigación se centra en el análisis de la dualidad estatutaria generada por la coexistencia de estos dos regímenes y en sus efectos concretos sobre las condiciones de trabajo, de salud y de pensión de los docentes del magisterio nariñense, con especial atención a las instituciones educativas del área urbana de San Juan de Pasto y de los municipios del departamento.
+          </p>
+          <p>
+            La elección del departamento de Nariño como unidad territorial de análisis responde a múltiples razones que se conjugan para hacer de este contexto un escenario especialmente revelador del fenómeno estudiado. En primer lugar, Nariño presenta una de las plantas docentes más numerosas y diversas del sur del país, con aproximadamente 11.500 educadores en servicio activo, distribuidos entre el área urbana de Pasto y una extensa red de municipios con condiciones geográficas y socioeconómicas muy distintas. En segundo lugar, la presencia de comunidades indígenas con sus propias tradiciones pedagógicas —los Pastos en el altiplano, los Awá en el Piedemonte Costero y la selva, los Eperara Siapidara en la costa Pacífica— hace que el análisis de la dualidad estatutaria tenga en Nariño una dimensión intercultural que no aparece con la misma fuerza en los estudios nacionales centrados en las grandes ciudades. En tercer lugar, la persistencia del conflicto armado en varios municipios del departamento añade una capa de vulnerabilidad que convierte las deficiencias del sistema de protección en salud y pensión en un problema de primer orden para la estabilidad del magisterio regional.
+          </p>
+
+          <h3 id="doc-1-2">1.2 Línea de investigación</h3>
+          <p>
+            Esta investigación se inscribe en la línea de investigación en Derechos Humanos, Derecho Constitucional y Derecho del Trabajo del Programa de Derecho de la Universidad CESMAG, adscrita al Grupo de Investigación en Derecho, Instituciones y Desarrollo Social (DIDS). El problema abordado es un problema de derechos fundamentales —el derecho a la seguridad social, el derecho a la salud en el trabajo y el derecho a la pensión de vejez— en el contexto específico del empleo público docente, lo que justifica su tratamiento dentro de esta línea de investigación, que articula el análisis normativo con el análisis de las condiciones sociales en que esos derechos se ejercen o se niegan.
+          </p>
+
+          <h3 id="doc-1-3">1.3 Planteamiento del problema</h3>
+          <h4>1.3.1 El pacto fundacional de 1979: el Decreto 2277 y la construcción de un magisterio protegido</h4>
+          <p>
+            El Decreto Ley 2277 del 14 de septiembre de 1979, dictado en ejercicio de las facultades extraordinarias conferidas al Presidente de la República por la Ley 2 de 1976, constituyó el primer estatuto integral del magisterio colombiano. Su expedición representó un hito en la historia del movimiento obrero docente: por primera vez, los educadores oficiales del país disponían de un instrumento normativo que reconocía la especificidad de su labor y establecía un sistema de protección proporcional a los riesgos y desgastes que esa labor imponía.
+          </p>
+          <p>
+            El Decreto 2277 descansaba sobre cuatro pilares fundamentales: la estabilidad laboral, el escalafón nacional docente (grados 1 al 14), el régimen especial de seguridad social materializado a través del Fondo Nacional de Prestaciones Sociales del Magisterio (FOMAG) creado por la Ley 91 de 1989, y la compatibilidad plena entre la pensión de jubilación y la continuación en el servicio activo hasta los 70 años. En materia pensional, reconocía la jubilación a los 55 años de edad con 20 años de servicio, con una tasa de reemplazo del 75% sobre el último salario devengado con todos sus factores.
+          </p>
+
+          <h4>1.3.2 La ruptura de 2002: el Decreto 1278 y la dualidad estatutaria</h4>
+          <p>
+            El Decreto 1278 del 19 de junio de 2002, expedido bajo facultades de la Ley 715 de 2001, introdujo el Estatuto de Profesionalización Docente. Si bien se promovió como una modernización meritocrática, introdujo la exclusión de los nuevos docentes vinculados a partir de su vigencia del régimen especial pensional y su incorporación al régimen de la Ley 100 de 1993: 57 años para mujeres y 62 años para hombres, 1.300 semanas de cotización (26 años), una tasa del 65% sobre el promedio de los últimos 10 años cotizados (IBL) y la prohibición expresa de compatibilidad entre pensión y salario activo.
+          </p>
+
+          <h4>1.3.3 La dimensión de la salud: FOMAG versus sistema general</h4>
+          <p>
+            El FOMAG fue concebido como un sistema especializado que reconoce los riesgos de la profesión docente (disfonía, patologías osteomusculares y estrés psicosocial). Sin embargo, los docentes vinculados bajo el Decreto 1278 enfrentan una desarticulación operativa crítica: las patologías vocales y ergonómicas sufren trabas burocráticas casi insuperables para ser calificadas como de origen laboral por las ARL y Juntas de Calificación, obligando a los docentes a costear tratamientos de su propio bolsillo.
+          </p>
+
+          <h4>1.3.4 La dimensión pensional: brecha estructural y ansiedad laboral</h4>
+          <p>
+            La diferencia en las condiciones pensionales entre ambos regímenes produce una brecha efectiva de más de 10 puntos porcentuales (75% vs. 65%), lo que representa una reducción superior al 30% del ingreso familiar al momento del retiro, acompañada de 7 años más de vida laboral exigida. Esta situación genera lo que Guy Standing denomina una "ansiedad de precariado" en profesionales altamente calificados con maestrías y doctorados.
+          </p>
+
+          <h4>1.3.5 El Decreto 0934 de 2026 y la tercera fragmentación</h4>
+          <p>
+            El Decreto 0934 del 31 de julio de 2026 reglamentó el Sistema Educativo Indígena Propio (SEIP) para educadores en territorios ancestrales. En Nariño, territorio con presencia de pueblos Pastos, Awá y Eperara Siapidara, este régimen introduce un tercer cuerpo de dinamizadores comunitarios, complejizando la gestión docente y evidenciando tensiones entre la autonomía comunitaria y la seguridad social garantista.
+          </p>
+
+          <h4>1.3.6 La evidencia empírica: encuesta al magisterio nariñense</h4>
+          <p>
+            La recolección empírica realizada en Pasto a 65 docentes oficiales activos reveló que el <strong>84% de los docentes del Decreto 1278</strong> evalúa como negativa o muy negativa la atención médica especializada de Fiduprevisora, y que el <strong>91%</strong> considera insuficiente el monto pensional proyectado para vivir con dignidad durante la vejez.
+          </p>
+
+          <h3 id="doc-1-4">1.4 Formulación del problema</h3>
+          <div class="monograph-callout-quote">
+            "¿En qué medida la coexistencia del Decreto Ley 2277 de 1979 y el Decreto 1278 de 2002 ha generado una desmejora o precarización de los derechos sustantivos laborales y prestacionales en materia de salud y pensión del magisterio oficial del departamento de Nariño durante el período 2002 a 2026, y en qué medida esa desmejora vulnera el principio constitucional de progresividad y no regresividad en materia de derechos económicos, sociales y culturales?"
+          </div>
+
+          <h3 id="doc-1-5">1.5 Objetivos</h3>
+          <p><strong>Objetivo General:</strong> Analizar la desmejora o precarización de los derechos sustantivos laborales y prestacionales en materia de salud y pensión del magisterio oficial del departamento de Nariño generada por la coexistencia del Decreto Ley 2277 de 1979 y el Decreto 1278 de 2002 durante el período 2002 a 2026, a la luz del principio constitucional de progresividad y no regresividad.</p>
+          <p><strong>Objetivos Específicos:</strong></p>
+          <ul style="margin-left:1.5rem; line-height:1.8;">
+            <li>Caracterizar el contenido normativo de los regímenes de salud y pensión establecidos por el Decreto 2277 de 1979 y el Decreto 1278 de 2002, identificando las diferencias relevantes desde la perspectiva de los derechos sustantivos laborales.</li>
+            <li>Evaluar los efectos de la dualidad estatutaria sobre las condiciones reales de salud y pensión de los docentes del magisterio nariñense, mediante la recolección y análisis de datos empíricos obtenidos a través de encuesta y entrevistas semiestructuradas.</li>
+            <li>Analizar la conformidad de la dualidad estatutaria con el principio constitucional de progresividad y no regresividad, a la luz de la jurisprudencia de la Corte Constitucional colombiana y de los estándares internacionales de derechos humanos aplicables.</li>
+            <li>Formular recomendaciones orientadas a la superación de las inequidades identificadas, con base en los hallazgos jurídicos y empíricos de la investigación.</li>
+          </ul>
+
+          <h3 id="doc-1-6">1.6 Justificación</h3>
+          <p>
+            La investigación se justifica desde cinco dimensiones complementarias: <strong>jurídica</strong> (escrutinio de los artículos 13, 25, 48, 53 y 93 de la Constitución Política y bloque de constitucionalidad), <strong>social</strong> (impacto en los más de 11.500 docentes de Nariño y calidad educativa), <strong>académica</strong> (aportes pioneros en el departamento articulando doctrina dogmática y datos de campo), <strong>territorial</strong> (diversidad geográfica andino-pacífica y zonas de conflicto) e <strong>institucional</strong> (adscripción al Grupo DIDS de la Universidad CESMAG).
+          </p>
+        </section>
+
+        <!-- CAPÍTULO 2 -->
+        <section id="doc-cap2" style="margin-top:3rem;">
+          <h2>2. MARCO REFERENCIAL</h2>
+
+          <h3 id="doc-2-1">2.1 Antecedentes</h3>
+          <p>
+            <strong>Internacionales:</strong> La <strong>Recomendación N.° 195 de la OIT (2004)</strong> postula que los docentes requieren salvaguardas especiales debido al desgaste psíquico y físico inherente a la enseñanza. El <strong>Informe UNESCO (2023)</strong> demostró que los países que precarizan las condiciones docentes sufren deserción escolar y caída en estándares de aprendizaje. A su vez, el Comité DESC de Naciones Unidas ha ratificado que la no regresividad prohíbe retrocesos no justificados en seguridad social.
+          </p>
+          <p>
+            <strong>Nacionales y Jurisprudenciales:</strong>
+            La <strong>Sentencia T-731 de 2007</strong> de la Corte Constitucional amparó a docentes frente a la desprotección del nuevo régimen. La <strong>Sentencia SU-245 de 2021</strong> sentó doctrina constitucional vinculante al declarar que la fragmentación pensional es una fuente estructural de inequidad contraria a la igualdad y ordenó interpretar las normas pensionales bajo el principio de favorabilidad laboral. A nivel regional, las investigaciones de Torres y Benavides (2020) en la Universidad de Nariño corroboraron las graves barreras de acceso a la salud para educadores del 1278 en zonas rurales del departamento.
+          </p>
+
+          <h3 id="doc-2-2">2.2 Marco teórico</h3>
+          <p>
+            <strong>La Teoría del Precariado (Guy Standing, 2011):</strong>
+            Standing demuestra que el precariado se configura por la pérdida de las seguridades laborales básicas: seguridad de ingresos, en el puesto de trabajo, de salud y de representación gremial. Los docentes del 1278 encarnan un precariado profesional en el sector público.
+          </p>
+          <p>
+            <strong>Principio de Progresividad y Prohibición de Regresividad:</strong>
+            Fundamentado en el Art. 2.1 del PIDESC y los fallos C-038 de 2004 y C-228 de 2011 de la Corte Constitucional, las normas regresivas se presumen inconstitucionales y el Estado carga con el deber estricto de demostrar su necesidad y proporcionalidad, lo cual jamás se justificó en el Decreto 1278.
+          </p>
+          <p>
+            <strong>El FOMAG como Institución de Protección Diferenciada:</strong>
+            Creado por la Ley 91 de 1989 y administrado por Fiduprevisora S.A., el fondo requiere un rediseño que garantice igualdad sustantiva a todos los educadores sin importar el año de nombramiento.
+          </p>
+
+          <h3 id="doc-2-3">2.3 Marco conceptual</h3>
+          <p>
+            Conceptualización rigurosa de: <em>Desmejora y precarización laboral</em>, <em>Dualidad estatutaria</em> (Doeringer y Piore, mercados duales), <em>Derechos prestacionales</em>, <em>Enfermedades profesionales docentes</em> (disfonía, burnout, osteomusculares) y <em>Principio de favorabilidad</em> (Art. 53 C.P.).
+          </p>
+
+          <h3 id="doc-2-4">2.4 Marco normativo</h3>
+          <p>
+            Integración de la <strong>Constitución Política de 1991</strong> (arts. 13, 25, 48, 49, 53, 93), <strong>Decreto Ley 2277 de 1979</strong>, <strong>Decreto 1278 de 2002</strong>, <strong>Ley 91 de 1989</strong>, <strong>Ley 100 de 1993</strong>, <strong>Ley 715 de 2001</strong> y <strong>Decreto 0934 de 2026</strong>.
+          </p>
+        </section>
+
+        <!-- CAPÍTULO 3 -->
+        <section id="doc-cap3" style="margin-top:3rem;">
+          <h2>3. METODOLOGÍA</h2>
+
+          <h3 id="doc-3-1">3.1 Paradigma y Diseño Metodológico</h3>
+          <p>
+            Paradigma mixto con diseño de <strong>triangulación convergente</strong> (Creswell y Plano Clark, 2018). Recolección concomitante de datos cuantitativos mediante encuesta estructurada y cualitativos mediante entrevistas semiestructuradas, contrastados bajo el método dogmático-crítico sociojurídico.
+          </p>
+
+          <h3 id="doc-3-5">3.5 Componente Cuantitativo: Encuesta Digital (Google Forms)</h3>
+          <p>
+            Aplicada a <strong>65 docentes en servicio activo</strong> del área urbana de Pasto (instituciones emblemáticas como INEM, CCP, Libertad, Santa Bárbara). Consta de 22 preguntas estructuradas en 4 secciones, validadas mediante juicio de 3 expertos y prueba piloto (Alpha de Cronbach > 0.70).
+          </p>
+
+          <!-- TABLA 1: ESTRUCTURA DEL INSTRUMENTO -->
+          <div style="margin:1.5rem 0;">
+            <strong style="color:#0e213b;">Tabla 1. Estructura del instrumento de encuesta digital</strong>
+            <table class="monograph-table">
+              <thead>
+                <tr>
+                  <th>Sección</th>
+                  <th>Temática Abordada</th>
+                  <th>N.° Preguntas</th>
+                  <th>Tipo de Escala / Pregunta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Sección A</strong></td>
+                  <td>Datos sociodemográficos y laborales (estatuto, nivel, área, género, años)</td>
+                  <td>5</td>
+                  <td>Selección múltiple con única respuesta</td>
+                </tr>
+                <tr>
+                  <td><strong>Sección B</strong></td>
+                  <td>Dimensión de salud ocupacional y atención especializada FOMAG</td>
+                  <td>7</td>
+                  <td>Escala Likert (1 a 5) y 1 pregunta abierta</td>
+                </tr>
+                <tr>
+                  <td><strong>Sección C</strong></td>
+                  <td>Dimensión pensional, edad de retiro, IBL y brecha económica</td>
+                  <td>7</td>
+                  <td>Escala Likert (1 a 5) y 1 pregunta abierta</td>
+                </tr>
+                <tr>
+                  <td><strong>Sección D</strong></td>
+                  <td>Percepción general de la dualidad estatutaria y propuestas de unificación</td>
+                  <td>3</td>
+                  <td>Escala de opinión y 1 pregunta abierta</td>
+                </tr>
+                <tr style="font-weight:700; background:#f1f5f9;">
+                  <td>TOTAL</td>
+                  <td>Instrumento integral validado</td>
+                  <td>22</td>
+                  <td>Instrumento Mixto</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- TARJETA INTERACTIVA DE ACCESO AL QR DE GOOGLE FORMS -->
+          <div class="survey-callout-card">
+            <div class="survey-qr-box">
+              <img src="assets/qr_encuesta_google_forms.jpg" alt="Código QR Encuesta Google Forms Magisterio de Pasto">
+              <span style="font-size:0.75rem; color:#0e213b; font-weight:700; display:block; margin-top:0.35rem;">CÓDIGO QR OFICIAL</span>
+            </div>
+            <div class="survey-callout-content">
+              <div style="text-transform:uppercase; font-size:0.75rem; letter-spacing:0.1em; color:#facc15; font-weight:700;">Instrumento Empírico de Recolección</div>
+              <h3>Encuesta Digital al Magisterio Oficial de Pasto</h3>
+              <p>
+                Este código QR enlaza directamente al formulario estructurado de Google Forms empleado para la recolección de los datos empíricos del trabajo de grado. Puedes escanearlo con cualquier teléfono móvil o hacer clic en el botón inferior para abrir el visor detallado.
+              </p>
+              <button class="btn-sustentacion" data-open-qr-modal style="background:#ffffff; color:#0f766e; font-weight:750; border:none;">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <span>Ampliar QR / Ver Instrucciones</span>
+              </button>
+            </div>
+          </div>
+
+          <h3 id="doc-3-6">3.6 Componente Cualitativo: Entrevistas Semiestructuradas</h3>
+          <p>
+            Realización de <strong>10 entrevistas a profundidad</strong> (5 docentes del Decreto 2277 y 5 del Decreto 1278) con una duración promedio de 45 minutos. Los docentes son identificados con los códigos E-D2277-01 a 05 y E-D1278-01 a 05 garantizando confidencialidad absoluta mediante consentimiento informado escrito. El análisis cualitativo siguió las seis fases temáticas de Braun y Clarke (2006).
+          </p>
+
+          <h3 id="doc-3-10">3.10 Cronograma de Actividades</h3>
+          <div style="margin:1.5rem 0;">
+            <strong style="color:#0e213b;">Tabla 2. Cronograma de actividades del trabajo de campo</strong>
+            <table class="monograph-table">
+              <thead>
+                <tr>
+                  <th>Fase / Actividad Investigativa</th>
+                  <th style="text-align:center;">Mes 1</th>
+                  <th style="text-align:center;">Mes 2</th>
+                  <th style="text-align:center;">Mes 3</th>
+                  <th style="text-align:center;">Mes 4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Revisión bibliográfica, documental y jurisprudencial</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                </tr>
+                <tr>
+                  <td>Validación de instrumento de encuesta y prueba piloto</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                </tr>
+                <tr>
+                  <td>Distribución de encuesta digital Google Forms y recolección de 65 muestras</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                </tr>
+                <tr>
+                  <td>Realización de las 10 entrevistas semiestructuradas a docentes en Pasto</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                </tr>
+                <tr>
+                  <td>Procesamiento estadístico descriptivo (SPSS/Excel) y análisis temático cualitativo</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center;">-</td>
+                </tr>
+                <tr>
+                  <td>Triangulación metodológica convergente e integración jurídica</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                  <td style="text-align:center;">-</td>
+                </tr>
+                <tr>
+                  <td>Redacción final de resultados, discusión y formulación de propuestas</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                </tr>
+                <tr>
+                  <td>Revisión final con la Directora de Grado, jurados y sustentación formal</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center;">-</td>
+                  <td style="text-align:center; font-weight:700; color:#059669;">X</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- REFERENCIAS BIBLIOGRÁFICAS -->
+        <section id="doc-referencias" style="margin-top:3.5rem; border-top:2px solid #e2e8f0; padding-top:2rem;">
+          <h2>REFERENCIAS BIBLIOGRÁFICAS</h2>
+
+          <h3 style="font-size:1.15rem; color:#1b4975; margin-top:1.5rem;">Normas jurídicas</h3>
+          <div class="monograph-ref-item">Constitución Política de Colombia. (1991). Gaceta Constitucional N.° 116 de 20 de julio de 1991. Presidencia de la República.</div>
+          <div class="monograph-ref-item">Decreto Ley 2277. (1979, 14 de septiembre). Por el cual se adoptan normas sobre el ejercicio de la profesión docente. Diario Oficial N.° 35.439. Presidencia de la República de Colombia.</div>
+          <div class="monograph-ref-item">Decreto 1278. (2002, 19 de junio). Por el cual se expide el Estatuto de Profesionalización Docente. Diario Oficial N.° 44.840. Presidencia de la República de Colombia.</div>
+          <div class="monograph-ref-item">Decreto 1477. (2014, 5 de agosto). Por el cual se expide la Tabla de Enfermedades Laborales. Diario Oficial N.° 49.234. Ministerio del Trabajo de Colombia.</div>
+          <div class="monograph-ref-item">Decreto 0934. (2026, 31 de julio). Por el cual se reglamenta el Sistema Educativo Indígena Propio (SEIP). Ministerio de Educación Nacional de Colombia.</div>
+          <div class="monograph-ref-item">Ley 91. (1989, 29 de diciembre). Por la cual se crea el Fondo Nacional de Prestaciones Sociales del Magisterio. Diario Oficial N.° 39.124. Congreso de la República de Colombia.</div>
+          <div class="monograph-ref-item">Ley 100. (1993, 23 de diciembre). Por la cual se crea el sistema de seguridad social integral. Diario Oficial N.° 41.148. Congreso de la República de Colombia.</div>
+          <div class="monograph-ref-item">Ley 715. (2001, 21 de diciembre). Por la cual se dictan normas orgánicas en materia de recursos y competencias. Diario Oficial N.° 44.654. Congreso de la República de Colombia.</div>
+          <div class="monograph-ref-item">Pacto Internacional de Derechos Económicos, Sociales y Culturales. (1966, 16 de diciembre). Resolución 2200A (XXI). Naciones Unidas. Ratificado por Colombia mediante Ley 74 de 1968.</div>
+
+          <h3 style="font-size:1.15rem; color:#1b4975; margin-top:1.5rem;">Jurisprudencia Constitucional</h3>
+          <div class="monograph-ref-item">Corte Constitucional de Colombia. (2004). Sentencia C-038 de 2004. M. P. Eduardo Montealegre Lynett.</div>
+          <div class="monograph-ref-item">Corte Constitucional de Colombia. (2007). Sentencia T-731 de 2007. M. P. Humberto Antonio Sierra Porto.</div>
+          <div class="monograph-ref-item">Corte Constitucional de Colombia. (2011). Sentencia C-228 de 2011. M. P. Juan Carlos Henao Pérez.</div>
+          <div class="monograph-ref-item">Corte Constitucional de Colombia. (2021). Sentencia SU-245 de 2021. M. P. Diana Fajardo Rivera.</div>
+
+          <h3 style="font-size:1.15rem; color:#1b4975; margin-top:1.5rem;">Libros, artículos y documentos académicos</h3>
+          <div class="monograph-ref-item">Braun, V. y Clarke, V. (2006). Using thematic analysis in psychology. <em>Qualitative Research in Psychology</em>, 3(2), 77–101. https://doi.org/10.1191/1478088706qp063oa</div>
+          <div class="monograph-ref-item">Creswell, J. W. y Plano Clark, V. L. (2018). <em>Designing and conducting mixed methods research</em> (3.a ed.). SAGE Publications.</div>
+          <div class="monograph-ref-item">Defensoría del Pueblo de Colombia. (2024). <em>Informe sobre educación en derechos humanos</em>. Defensoría del Pueblo.</div>
+          <div class="monograph-ref-item">Doeringer, P. B. y Piore, M. J. (1971). <em>Internal labor markets and manpower analysis</em>. D.C. Heath.</div>
+          <div class="monograph-ref-item">Fajardo, L. E. y Molina, C. A. (2018). Dualidad estatutaria docente y bienestar laboral en Colombia. <em>Revista Latinoamericana de Estudios Educativos</em>, 48(2), 55–84.</div>
+          <div class="monograph-ref-item">Hernández Sampieri, R., Fernández Collado, C. y Baptista Lucio, P. (2014). <em>Metodología de la investigación</em> (6.a ed.). McGraw-Hill Education.</div>
+          <div class="monograph-ref-item">Kvale, S. (2011). <em>Las entrevistas en investigación cualitativa</em>. Ediciones Morata.</div>
+          <div class="monograph-ref-item">Ministerio de Educación Nacional de Colombia. (2024). <em>Estadísticas del sector educativo</em>. MEN.</div>
+          <div class="monograph-ref-item">Organización Internacional del Trabajo. (2004). <em>Recomendación N.° 195 sobre el desarrollo de los recursos humanos</em>. OIT.</div>
+          <div class="monograph-ref-item">Secretaría de Educación Departamental de Nariño. (2024). <em>Informe de planta docente departamental</em>. Gobernación de Nariño.</div>
+          <div class="monograph-ref-item">Standing, G. (2011). <em>The precariat: The new dangerous class</em>. Bloomsbury Academic.</div>
+          <div class="monograph-ref-item">Torres, R. y Benavides, M. (2020). <em>Barreras de acceso a la salud para docentes del Decreto 1278 en Nariño</em> [Trabajo de grado, Universidad de Nariño]. Repositorio institucional UDENAR.</div>
+          <div class="monograph-ref-item">UNESCO. (2023). <em>Global Education Monitoring Report 2023: Technology in education</em>. UNESCO.</div>
+        </section>
+
+      </article>
+
+      <!-- SECCIÓN INTEGRADA DE DIAPOSITIVAS INTERACTIVAS (MODO SUSTENTACIÓN ANTE EL JURADO) -->
+      <div id="presentacion-diapositivas-ancla" style="margin-top:3.5rem; scroll-margin-top:80px;">
+        <div class="section-header">
+          <div class="section-pretitle">Modo Sustentación Magistral en Vivo</div>
+          <h2 class="section-title">Diapositivas Interactivas de Ponencia</h2>
+          <p class="section-desc">
+            Recurso de apoyo audiovisual para la exposición formal ante el jurado calificador de la Universidad CESMAG. Utilice los botones de navegación o las teclas del teclado (Flechas &rarr; / &larr; / Espacio / Tecla 'N' para notas del orador / 'F' para pantalla completa).
+          </p>
+        </div>
+
+        <div class="slides-app-container" id="slides-presentation-container">
+          <!-- BARRA SUPERIOR DEL VISOR -->
+          <div class="slides-toolbar">
+            <div class="slide-counter" id="slide-counter-display">Diapositiva 1 de 10</div>
+            
+            <div class="slides-controls-nav">
+              <button class="btn-slide-nav" id="btn-slide-prev" title="Anterior (Flecha Izquierda)">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                <span>Anterior</span>
+              </button>
+
+              <button class="btn-slide-nav" id="btn-slide-next" title="Siguiente (Flecha Derecha / Espacio)">
+                <span>Siguiente</span>
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+              </button>
+
+              <button class="btn-slide-nav" id="btn-toggle-notes" title="Activar/Desactivar Notas del Expositor (Tecla N)">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"/></svg>
+                <span>Notas MUMA</span>
+              </button>
+
+              <button class="btn-slide-nav" id="btn-fullscreen-slides" title="Pantalla Completa (Tecla F)">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                <span>Pantalla Completa</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="slides-progress-track">
+            <div class="slides-progress-bar" id="slides-progress-fill"></div>
+          </div>
+
+          <!-- ESCENARIO PRINCIPAL DE LA DIAPOSITIVA -->
+          <div class="slide-stage-viewport">
+            <div class="slide-header-tag" id="slide-tag">Portada Oficial</div>
+            <h2 class="slide-main-heading" id="slide-title">Cargando diapositiva...</h2>
+            <div class="slide-body-text" id="slide-body"></div>
+          </div>
+
+          <!-- PANEL DE NOTAS PARA EL EXPOSITOR (MUMA) -->
+          <div class="speaker-notes-panel" id="speaker-notes-panel">
+            <p id="slide-notes-text">Notas de sustentación para el jurado examinador.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -904,25 +1444,25 @@
       <div>
         <h4 class="footer-inst-title">UNIVERSIDAD CESMAG</h4>
         <p class="footer-meta-p">
-          Facultad de Ciencias Sociales y Humanas · Programa de Derecho.<br>
+          Facultad de Ciencias Jurídicas y Políticas · Programa de Derecho.<br>
           Grupo de Investigación <em>"Derecho, Innovación y Desarrollo Social (DIDS)"</em>.<br>
-          Línea: Derecho, Emprendimiento y Sociedad.
+          Línea: Derechos Humanos, Derecho Constitucional y Derecho del Trabajo.
         </p>
         <p style="margin-top:0.75rem; font-size:0.85rem; color:#cbd5e1;">
           <strong>Autor:</strong> Sebastián Muñoz Martínez (MUMA)<br>
-          <strong>Docente Asesora:</strong> Mg. Johana Elizabeth Ortega Caicedo<br>
-          San Juan de Pasto, Colombia · 2026
+          <strong>Directora de Investigación:</strong> Mg. MARIA ALICIA ORDONEZ HERRERA<br>
+          San Juan de Pasto, Nariño, Colombia · 2026
         </p>
       </div>
 
       <div class="footer-nav-col">
         <h5>Navegación Rápida</h5>
         <ul>
-          <li><a href="#" data-switch-tab="tab-inicio">Inicio & Video</a></li>
+          <li><a href="#" data-switch-tab="tab-inicio">Inicio & Póster</a></li>
           <li><a href="#" data-switch-tab="tab-decretos">Los 3 Decretos</a></li>
           <li><a href="#" data-switch-tab="tab-precarizacion">Tesis de Precarización</a></li>
           <li><a href="#" data-switch-tab="tab-capitulos">Capítulos de Grado</a></li>
-          <li><a href="#" data-switch-tab="tab-diapositivas">Diapositivas Jurado</a></li>
+          <li><a href="#" data-switch-tab="tab-informe-final">Informe Final de Grado</a></li>
           <li><a href="#" data-switch-tab="tab-simulador">Simulador Pensional</a></li>
         </ul>
       </div>
@@ -942,10 +1482,82 @@
 
     <div class="footer-bottom-bar">
       <div class="container">
-        Plataforma académica diseñada para la sustentación del título de Abogado · Todos los derechos reservados &copy; 2026
+        Plataforma académica diseñada para la sustentación del título de Abogado · Universidad CESMAG &copy; 2026
       </div>
     </div>
   </footer>
+
+  <!-- MODAL 1: CÓDIGO QR ENCUESTA GOOGLE FORMS -->
+  <div class="academic-modal-overlay" id="academic-qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
+    <div class="academic-modal-card">
+      <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      <div class="qr-modal-content">
+        <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:#0d827d; font-weight:800; margin-bottom:0.25rem;">
+          Instrumento de Investigación · Google Forms
+        </div>
+        <h3 id="qr-modal-title" style="color:#0e213b; font-size:1.4rem; margin-bottom:0.5rem;">
+          Encuesta al Magisterio Oficial de Pasto
+        </h3>
+        <p style="font-size:0.9rem; color:#475569; max-width:480px; margin:0 auto 1.25rem auto;">
+          Escanea este código QR con la cámara de tu teléfono móvil o aplicación de escaneo para diligenciar el formulario digital estructurado de 22 preguntas aplicado a docentes de Pasto.
+        </p>
+
+        <div class="qr-modal-image-wrapper">
+          <img src="assets/qr_encuesta_google_forms.jpg" alt="Código QR Encuesta Google Forms Magisterio de Pasto">
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:1rem; margin-top:1rem; text-align:left; font-size:0.85rem; color:#334155;">
+          <strong>Ficha Técnica de la Encuesta:</strong>
+          <ul style="margin:0.5rem 0 0 1.25rem; line-height:1.6;">
+            <li><strong>Muestra:</strong> 65 docentes oficiales en servicio activo en el área urbana de Pasto.</li>
+            <li><strong>Dimensiones:</strong> Sociodemográfica, salud ocupacional (FOMAG) y perspectiva pensional.</li>
+            <li><strong>Validación:</strong> Juicio de 3 expertos y consistencia Alpha de Cronbach &gt; 0.70.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:1.5rem; display:flex; justify-content:center; gap:0.75rem;">
+          <a href="assets/qr_encuesta_google_forms.jpg" download="QR_Encuesta_Magisterio_Forms.jpg" class="btn-sustentacion" style="background:#0d827d; font-size:0.85rem;">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            <span>Descargar Imagen QR</span>
+          </a>
+          <button class="modal-close-btn" style="position:static; border-radius:var(--radius-sm); width:auto; height:auto; padding:0.5rem 1rem; font-size:0.85rem; background:#f1f5f9; color:#334155;">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: LIGHTBOX PÓSTER CIENTÍFICO EN ALTA RESOLUCIÓN -->
+  <div class="academic-modal-overlay" id="academic-poster-modal" role="dialog" aria-modal="true" aria-labelledby="poster-modal-title">
+    <div class="academic-modal-card wide-poster-modal">
+      <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      <div style="text-align:center; margin-bottom:1rem;">
+        <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:#b45309; font-weight:800;">
+          Póster Académico e Infografía Oficial
+        </div>
+        <h3 id="poster-modal-title" style="color:#0e213b; font-size:1.35rem; margin-top:0.25rem;">
+          Informe Final de Trabajo de Grado · Universidad CESMAG
+        </h3>
+      </div>
+
+      <div style="background:#020617; border-radius:var(--radius-sm); padding:0.5rem; text-align:center; overflow-x:auto;">
+        <img src="assets/poster_informe_final.jpg" alt="Póster Académico Ampliado" style="max-width:100%; height:auto; display:block; margin:0 auto; border-radius:4px;">
+      </div>
+
+      <div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <span style="font-size:0.85rem; color:#64748b;">
+          Resolución completa · Sustentación para optar al título de Abogado · Sebastián Muñoz Martínez
+        </span>
+        <div style="display:flex; gap:0.5rem;">
+          <a href="assets/poster_informe_final.jpg" download="Poster_Academico_Magisterio_MUMA_CESMAG.jpg" class="btn-sustentacion" style="font-size:0.85rem;">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            <span>Descargar Póster JPG</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- SCRIPTS MODULARES -->
   <script src="js/simulator.js"></script>
